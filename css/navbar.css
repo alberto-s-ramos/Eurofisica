@@ -9,7 +9,7 @@
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #400f0f;
+    color: #343434;
     text-decoration: none;
 }
 
@@ -34,7 +34,7 @@
 
 .navbar.active .nav-link:hover,
 .navbar.active .nav-link:focus {
-    color: #6e0101;
+    color: #343434;
     text-decoration: none;
 }
 
