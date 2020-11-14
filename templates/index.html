@@ -7,6 +7,9 @@
     <link href="../css/navbar.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- FROM:https://github.com/michalsnik/aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Eurofisica</title>
 </head>
 
@@ -29,29 +32,44 @@
             </nav>
         </header>
 
+
         <!-- Content -->
-        <div class="container">
             <div class="pt-5 text-white">
                 <header class="intro">
                     <!--<div class="title">EUROFÍSICA</div>-->
-                     <img src="../img/EFLogo.png" style="width: 60%">
+                     <img src="../img/EFLogo.png" style="width: 60%; display: block;margin-left: auto;margin-right: auto">
                     <div class="span" >Desde 1998 a zelar pelo seu bem estar.</div>
                     <hr class="custom-hr">
 
                 </header>
             </div>
-        </div>
 
                 <br><br><br><br>
-                <div class="glass-container left">
-                    <p>Lorem ipsum dolor sit amet, <strong class="font-weight-bold">consectetur adipisicing </strong>elit. Explicabo consectetur odio voluptatum facere animi temporibus, distinctio tempore enim corporis quam <strong class="font-weight-bold">recusandae </strong>placeat! Voluptatum voluptate, ex modi illum quas nam distinctio.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <br><br><br><br>
-                <div class="glass-container right">
-                    <p>Lorem ipsum dolor sit amet, <strong class="font-weight-bold">consectetur adipisicing </strong>elit. Explicabo consectetur odio voluptatum facere animi temporibus, distinctio tempore enim corporis quam <strong class="font-weight-bold">recusandae </strong>placeat! Voluptatum voluptate, ex modi illum quas nam distinctio.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                <section class="glass-container">
+                    <div class="custom-container">
+                        <div class="custom-card" data-aos="fade-right" data-aos-offset="50" >
+                            <img src="../img/stock1.jpg" >
+                            <div>
+                                <h1> Hidroterapia </h1>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, quam id vestibulum bibendum, eros ligula lobortis mauris, ac iaculis leo libero in ipsum. Cras nibh ante, dictum in risus eget, vehicula blandit magna. In gravida eu dui nec sodales. In facilisis orci quis erat efficitur feugiat. Suspendisse placerat elit erat, et volutpat turpis dignissim sit amet. Donec maximus molestie est a scelerisque. Vivamus sagittis diam dui, a mollis elit tempor vel.</p>
+                            </div>
+                        </div>
+                        <div class="custom-card" data-aos="fade-left">
+                            <img src="../img/stock2.png" >
+                            <div>
+                                <h1> Laserterapia </h1>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, quam id vestibulum bibendum, eros ligula lobortis mauris, ac iaculis leo libero in ipsum. Cras nibh ante, dictum in risus eget, vehicula blandit magna. In gravida eu dui nec sodales. In facilisis orci quis erat efficitur feugiat. Suspendisse placerat elit erat, et volutpat turpis dignissim sit amet. Donec maximus molestie est a scelerisque. Vivamus sagittis diam dui, a mollis elit tempor vel.</p>
+                            </div>
+                        </div>
+                        <div class="custom-card" data-aos="fade-right">
+                            <img src="../img/stock3.jpg" >
+                            <div>
+                                <h1> Massoterapia </h1>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, quam id vestibulum bibendum, eros ligula lobortis mauris, ac iaculis leo libero in ipsum. Cras nibh ante, dictum in risus eget, vehicula blandit magna. In gravida eu dui nec sodales. In facilisis orci quis erat efficitur feugiat. Suspendisse placerat elit erat, et volutpat turpis dignissim sit amet. Donec maximus molestie est a scelerisque. Vivamus sagittis diam dui, a mollis elit tempor vel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -67,5 +85,16 @@
                 });
             });
         </script>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <!-- FROM:https://github.com/michalsnik/aos -->
+      <script>
+        AOS.init({
+            offset:150,
+            duration: 500
+
+        });
+      </script>
+
 
 </body>

@@ -1,6 +1,6 @@
 
 .navbar {
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 .navbar .nav-link {
@@ -22,24 +22,24 @@
 .navbar.active {
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 0px 0px 20px 20px; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
+    border-radius: 0px 0px 0px 0px; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
     backdrop-filter: blur(20px);
 }
 
 .navbar.active .nav-link {
-    color: #ffffff;
+    color: #343434;
 }
 
 
 
 .navbar.active .nav-link:hover,
 .navbar.active .nav-link:focus {
-    color: #343434;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .navbar.active .navbar-brand {
-    color: #ffffff;
+    color: #343434;
 }
 
 
