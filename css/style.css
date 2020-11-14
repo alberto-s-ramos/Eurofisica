@@ -214,6 +214,63 @@ p{
             }
         }
 
+/*
+* ==========================================
+* HORIZONTAL SCROLL
+* ==========================================
+*/
+
+.custom-card-scrollable img{
+    height: 200px;
+}
+
+.horizontal-scroll{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    overflow-x: auto;
+    z-index: 10;
+
+}
+.horizontal-scroll::-webkit-scrollbar{
+    width: 0;
+}
+
+.horizontal-scroll .custom-card{
+    height: 350px;
+    width: 350px;
+}
+
+
+.custom-card-scrollable{
+    overflow: hidden; /* Para as imagens serem também afetadas pelo border-radiu  */
+    background: rgba(255,255,255,.35);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    max-height: 350px;
+    max-width: 300px;
+    min-width: 300px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    margin: 1rem;
+    z-index: 8;
+}
+.custom-card-scrollable:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+
+}
+
+.custom-card-scrollable>div{
+    padding: 1rem;
+}
+.custom-card-scrollable>div h1{
+
+    text-align: center;
+    font-size: 1rem;
+}
 
 
 
