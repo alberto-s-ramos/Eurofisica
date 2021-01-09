@@ -44,28 +44,6 @@ p{
     text-align: center;
 }
 
-  /* Changes sizes when window width decreases*/
-        @media (max-width: 65rem) {
-            .title{
-                font-size: 4rem;
-            }
-            .span{
-                font-size: 2rem;
-            }
-
-        }
-        @media (max-width: 45rem) {
-            .title{
-                font-size: 3.5rem;
-            }
-            .span{
-                font-size: 1.4rem;
-            }
-            hr{
-                align:"center";
-            }
-        }
-
 /*
 * ==========================================
 * HEADER
@@ -220,8 +198,83 @@ p{
     height: 50vh;
 }
 
+/*
+* ==========================================
+* TEAM
+* ==========================================
+*/
+
+.team {
+    display: flex;
+    position: relative;
+	flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.teamCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: #1f232a; /* #34ebe1; */
+    width: 280px;
+    height: 320px;
+    min-width: 250px;
+	padding-top: 1rem;
+	margin: 0.5rem;
+    text-align: center;
+    transition: all 1s;
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid #1f232a
+}
+
+.teamCard:before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #6a1630;
+    bottom: 0;
+    right: -1px;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    transition: 0.25s;
+
+}
+
+.teamCard:hover:before {
+    transform: scale(70);
+}
+
+.teamCard h3 {
+	font-family: 'Open Sans', sans-serif;
+	border-bottom: 2px;
+	border-right: 2px;
+	text-align: center;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.teamCard img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+	border-radius: 50%;
+    transition: all 1s;
+    z-index: 1;
+}
+
+.teamCard:hover{
+    transform: scale(1.05);
+}
 
 
 
 
 
+ 
