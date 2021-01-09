@@ -220,6 +220,54 @@ p{
     height: 50vh;
 }
 
+/*
+* ==========================================
+* TEAM
+* ==========================================
+*/
+
+.team {
+    display: flex;
+    position: relative;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    background-color: #34ebe1;
+    width: 280px;
+    height: 320px;
+    min-width: 250px !important;
+	padding-top: 1rem;
+	margin: 0.5rem;
+	text-align: center;
+	/*box-shadow: 4px 4px 5px #888888;*/
+    transition: all 1s;
+    overflow: hidden;
+    /*opacity: 90%;*/
+}
+
+.card h3 {
+	font-family: 'Open Sans', sans-serif;
+	border-bottom: 2px;
+	border-right: 2px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.card img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+	border-radius: 50%;
+	transition: all 1s;
+}
+
+.card:hover{
+	transform: scale(1.05);
+}
 
 
 
