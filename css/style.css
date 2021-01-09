@@ -1,51 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@300&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100&display=swap');
 
-/*
-* ==========================================
+/* ==========================================
 * BODY
 * ==========================================
 */
 body {
-    min-height: 110vh;
-    /*
-    background-color: #ffffff;
-    background-image: linear-gradient(90deg, #791717 0%, #a44d4d 100%);
-     */
-    /* TESTING */
-    background: linear-gradient(45deg, #2b6064, #559da5, #45a085, #27675c);
-
-    background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-    text-align: justify;
-    color: black;
-}
-
-img{
+    margin:0;
+    padding: 0;
     width: 100%;
-    max-height: 400px;
+    height: 100%;
 }
-
 
 .custom-hr{
     border-top: 4px solid rgba(255,255,255,.3);
     border-radius: 30px;
     width: 55%;
-}
-
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
 
 /*
@@ -54,28 +25,23 @@ img{
 * ==========================================
 */
 
-div{
-
-}
 p{
     font-size: 1rem;
     text-shadow: 1px 1px 5px rgba(0,0,0,.15);
+    font-family: 'Manjari', sans-serif;
 }
 
 .title{
     font-size: 5rem;
-    text-shadow: 1px 1px 5px rgba(0,0,0,.23);
     text-align: center;
 }
 
 .span{
     font-size: 3rem;
-    text-shadow: 1px 1px 5px rgba(0,0,0,.1);
+    /*text-shadow: 1px 1px 5px rgba(0,0,0,.1);*/
     color: rgba(255,255,255,.8);
     padding-left: 1rem;
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
-
 }
 
   /* Changes sizes when window width decreases*/
@@ -100,177 +66,160 @@ p{
             }
         }
 
-.intro{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-}
-
-
 /*
 * ==========================================
-* CONTAINER
+* HEADER
 * ==========================================
 */
 
-.custom-container{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("../img/Musculo10.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: slide 20s infinite;
+  background-color: #1d1d1d;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+}
+.header-section {
+  position: relative;
+  height: 50vh;
+  padding: 15% 0 10%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
 }
 
-.glass-container{
-    width: 100%;
-    box-shadow: 10px 1px 10px rgba(0, 0, 0, 0.5);
-    border-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.35);
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-rows: auto auto auto;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    color: #000000;
-   /* grid-template-areas: ' ' ;*/
-    justify-items: stretch;
-    text-align: justify;
-    padding: 3em;
-    border-style: solid;
-    border-width: 2px;
-    margin-bottom: 0rem;
-}
-
-    @media (max-width: 45rem) {
-            .custom-container{
-                width: 100%;
-
-            }
-            .glass-container{
-                padding: 2rem;
-            }
+@keyframes slide {
+    0%{
+        background-image: url("../img/Musculo10.jpg");
     }
+    20%{
+        background-image: url("../img/Neuro6.jpg");
+    }
+    40%{
+        background-image: url("../img/Pilates2.jpg");
+    }
+    60%{
+        background-image: url("../img/Rceção3.jpg");
+    }
+}
 
 /*
 * ==========================================
-* CARD
+* ABOUT
 * ==========================================
 */
 
-.custom-card{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colunas com o mesmo tamanho */
-    overflow: hidden; /* Para as imagens serem também afetadas pelo border-radiu  */
-    background: rgba(255,255,255,.35);
-    backdrop-filter: blur(20px);
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
-}
-.custom-card>div{
-    padding: 1.5rem;
-}
-.custom-card>div h1{
-    margin-bottom: 2rem;
-}
-.custom-card img{
-    height: 400px;
+.section-wrap {
+  position: relative;
+  background-color: #ffffff;
+  color: #ffffff;
 }
 
-/* Automaticamente coloca as imagens à direita/esquerda */
-.custom-card:nth-child(even) img{
-    order:2;
+.section-wrap:before{
+    content: '';
+    position: absolute;
+    width:50%;
+    height:100%;
+    left:50%;
+    background-color:  #1f232a;
+    color: white;
 }
 
+.section {
+  position: relative;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+.section-left{
+  display: flex;
+  justify-content: center;
+  padding-right: 3rem;
+}
 
-  /* Changes sizes when window width decreases*/
-        @media (max-width: 65rem) {
-            .custom-card{
-                display: block;
-            }
-            .custom-card img{
-                max-height: 300px;
-            }
-            .custom-card>div h1{
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-            }
-            .custom-card>div p{
-                font-size: .8rem;
-            }
+.introImage{
+    content:url("../img/EuroFisicaIntro.png");
+    width: 700px;
+    height: 250px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-        }
-        @media (max-width: 45rem) {
-            .custom-card img{
-                max-height: 250px;
+.section-right{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    width: 80%;
+}
+
+.introImage2{
+    content:url("../img/EuroFisicaIntro2.png");
+    width: 0px;
+    height: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Changes sizes when window width decreases*/
+        @media (max-width: 55rem) {
+            .section {
+              padding: 1rem;
+              background-color:  #1f232a;
+              grid-template-columns: 0fr 1fr;
+
             }
-             .custom-card>div h1{
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
+            .section-left{
+                padding: 0;
             }
-            .custom-card>div p{
-                font-size: .7rem;
+            .section-right{
+              padding:2rem;
+              width: 100%;
+              text-align: justify;
+            }
+            .introImage2{
+                width: 700px;
+                height: 150px;
+                padding-bottom: 1rem;
             }
         }
 
 /*
 * ==========================================
-* HORIZONTAL SCROLL
+* SERVICES
 * ==========================================
 */
 
-.custom-card-scrollable img{
-    height: 200px;
-}
-
-.horizontal-scroll{
+.services{
     width: 100%;
-    text-align: center;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
-    overflow-x: auto;
-    z-index: 10;
-
-}
-.horizontal-scroll::-webkit-scrollbar{
-    width: 0;
+    background-color: #6a1630;
+    height: 50vh;
 }
 
-.horizontal-scroll .custom-card{
-    height: 350px;
-    width: 350px;
-}
-
-
-.custom-card-scrollable{
-    overflow: hidden; /* Para as imagens serem também afetadas pelo border-radiu  */
-    background: rgba(255,255,255,.35);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    max-height: 350px;
-    max-width: 300px;
-    min-width: 300px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    margin: 1rem;
-    z-index: 8;
-}
-.custom-card-scrollable:hover{
-    transform: scale(1.05);
-    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
-
-}
-
-.custom-card-scrollable>div{
-    padding: 1rem;
-}
-.custom-card-scrollable>div h1{
-
-    text-align: center;
-    font-size: 1rem;
-}
 
 
 
