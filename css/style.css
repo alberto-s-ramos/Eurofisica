@@ -27,10 +27,12 @@ body {
 
 p{
     font-size: 1rem;
-    text-shadow: 1px 1px 5px rgba(0,0,0,.15);
     font-family: 'Manjari', sans-serif;
 }
-
+h1{
+    font-size: 3rem;
+    font-family: 'Manjari', sans-serif;
+}
 .title{
     font-size: 5rem;
     text-align: center;
@@ -192,11 +194,66 @@ p{
 * ==========================================
 */
 
+
 .services{
     width: 100%;
+    height: 100%;
     background-color: #6a1630;
-    height: 50vh;
+    display: flex;
+    position: relative;
+	flex-wrap: wrap;
+    justify-content: center;
 }
+.serviceImage{
+    width: 50vw;
+    height: 40vh;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+}
+.serviceImage>h1{
+    width: 100%;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding-top: .7rem;
+    opacity: 1;
+    text-align: center;
+    transition: all 0.9s;
+}
+.serviceDescription{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    opacity: 0;
+    transition: all 0.9s;
+}
+
+.serviceImage:hover > .serviceDescription{
+    transition: all 0.6s;
+    opacity: 1;
+}
+.serviceImage:hover > h1{
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+ @media (max-width: 55rem) {
+        .serviceImage{
+            width: 100vw;
+        }
+}
+
 
 /*
 * ==========================================
@@ -225,10 +282,11 @@ p{
 	padding-top: 1rem;
 	margin: 0.5rem;
     text-align: center;
-    transition: all 1s;
+    transition: all 1.5s;
     overflow: hidden;
     border-radius: 10px;
-    border: solid #1f232a
+    border: solid #1f232a;
+
 }
 
 .teamCard:before {
@@ -265,7 +323,7 @@ p{
     display: block;
     margin: auto;
 	border-radius: 50%;
-    transition: all 1s;
+    transition: all 2s;
     z-index: 1;
 }
 
