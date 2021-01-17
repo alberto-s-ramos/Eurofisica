@@ -65,7 +65,7 @@
 
  @media (max-width: 60rem) {
         .serviceImage{
-            width: 50vw;
+            flex-basis: 50%;
         }
          .serviceImage>h1{
             font-size: 1rem;
