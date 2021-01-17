@@ -1,0 +1,82 @@
+/*
+* ==========================================
+* SERVICES
+* ==========================================
+*/
+
+.services{
+    width: 100%;
+    height: 100%;
+    background-color: #6a1630;
+    display: flex;
+    position: relative;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+.serviceImage{
+    width: 25vw;
+    height: 40vh;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+
+
+}
+.serviceImage>h1{
+    text-align: center;
+    position: absolute;
+    padding: 8vh 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    opacity: 1;
+    transition: all 0.9s;
+}
+.serviceDescription{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    opacity: 0;
+    transition: all 0.9s;
+}
+
+.serviceImage>h1:hover{
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+
+}
+
+
+ @media (max-width: 60rem) {
+        .serviceImage{
+            width: 50vw;
+        }
+         .serviceImage>h1{
+            font-size: 1rem;
+        }
+}
+ @media (max-width: 73rem) {
+
+         .serviceImage>h1{
+            font-size: 1.7rem;
+        }
+         .serviceDescription>h1{
+            font-size: 1.7rem;
+        }
+}

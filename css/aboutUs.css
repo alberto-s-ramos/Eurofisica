@@ -1,0 +1,96 @@
+/*
+* ==========================================
+* ABOUT
+* ==========================================
+*/
+
+.section-wrap {
+  position: relative;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.section-wrap:before{
+    content: '';
+    position: absolute;
+    width:50%;
+    height:100%;
+    left:50%;
+    background-color:  #1f232a;
+    color: white;
+}
+
+.section {
+  position: relative;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-left{
+  display: flex;
+  justify-content: center;
+  padding-right: 3rem;
+}
+
+.introImage{
+    content:url("../img/EuroFisicaIntro.png");
+    width: 700px;
+    height: 250px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-right{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    width: 80%;
+}
+
+.introImage2{
+    content:url("../img/EuroFisicaIntro2.png");
+    width: 0px;
+    height: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Changes sizes when window width decreases*/
+        @media (max-width: 55rem) {
+            .section {
+              padding: 1rem;
+              background-color:  #1f232a;
+              grid-template-columns: 0fr 1fr;
+
+            }
+            .section-left{
+                padding: 0;
+            }
+            .section-right{
+              padding:2rem;
+              width: 100%;
+              text-align: justify;
+            }
+            .introImage2{
+                width: 700px;
+                height: 150px;
+                padding-bottom: 1rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
