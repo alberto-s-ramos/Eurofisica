@@ -194,19 +194,20 @@ h1{
 * ==========================================
 */
 
-
 .services{
     width: 100%;
     height: 100%;
     background-color: #6a1630;
     display: flex;
     position: relative;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .serviceImage{
     width: 25vw;
     height: 40vh;
+    flex-grow: 1;
+    flex-basis: calc((100% - 25vw) / 3);
     display: inline-block;
     background-position: center;
     background-size: cover;
@@ -215,7 +216,6 @@ h1{
     position: relative;
     cursor: pointer;
     -webkit-transition: all 0.5s;
-
 
 }
 .serviceImage>h1{
@@ -250,9 +250,7 @@ h1{
     transition: all 0.3s;
     background-color: rgba(0,0,0,0.6);
     backdrop-filter: blur(10px);
-
 }
-
 
  @media (max-width: 60rem) {
         .serviceImage{
@@ -263,7 +261,6 @@ h1{
         }
 }
  @media (max-width: 73rem) {
-
          .serviceImage>h1{
             font-size: 1.7rem;
         }
@@ -271,7 +268,6 @@ h1{
             font-size: 1.7rem;
         }
 }
-
 
 /*
 * ==========================================
@@ -282,7 +278,7 @@ h1{
 .team {
     display: flex;
     position: relative;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 1rem;
 }
@@ -293,12 +289,12 @@ h1{
     flex-direction: column;
     word-wrap: break-word;
     background-clip: border-box;
-    background-color: #1f232a; /* #34ebe1; */
+    background-color: #1f232a;
     width: auto;
     height: 225px;
     min-width: 200px;
-	padding-top: 1rem;
-	margin: 0.5rem;
+    padding-top: 1rem;
+    margin: 0.5rem;
     text-align: center;
     transition: all 1.5s;
     overflow: hidden;
@@ -322,36 +318,32 @@ h1{
 }
 
 .teamCard:hover:before {
-    transform: scale(70);
+  transform: scale(70);
 }
 
 .teamCard h3 {
 	font-family: 'Manjari', sans-serif;
-    font-size: 100%;
+  font-size: 100%;
 	border-bottom: 2px;
 	border-right: 2px;
 	text-align: center;
-    color: #ffffff;
-    z-index: 1;
+  color: #ffffff;
+
 }
 
 .teamCard img {
-    object-fit: cover;
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: auto;
-	border-radius: 50%;
-    transition: all 2s;
-    z-index: 1;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  transition: all 2s;
 }
 
 .teamCard:hover{
     transform: scale(1.05);
 }
-
-
-
 
 /*
 * ==========================================
