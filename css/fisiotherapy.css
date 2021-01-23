@@ -14,9 +14,12 @@
     background-color: rgba(0,0,0,0.4);
     backdrop-filter: blur(2px);
     -webkit-transition: all 0.5s;
-
 }
-
+.fisiotherapy-area:hover{
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0.55);
+    backdrop-filter: blur(10px);
+}
 
 .expand-button{
     display: block;
@@ -45,6 +48,8 @@
     float: bottom;
 }
 
+
+
 .expand-button--active{
     display: block;
     width: 100%;
@@ -58,6 +63,7 @@
     text-align:center;
     transition: background 0.2s;
 }
+
 .expand-button--active::after{
     content: '\25b4';
     float: bottom;
