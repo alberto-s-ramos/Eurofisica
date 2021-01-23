@@ -17,7 +17,7 @@
 .serviceImage{
     height: 40vh;
     flex-grow: 1;
-    flex-basis: 25%;
+    flex-basis: 33%;
     display: inline-block;
     background-position: center;
     background-size: cover;
