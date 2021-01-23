@@ -1,0 +1,95 @@
+
+.fisiotherapy{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+}
+.fisiotherapy-area{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(2px);
+    -webkit-transition: all 0.5s;
+
+}
+
+
+.expand-button{
+    display: block;
+    width: 100%;
+    font-family: 'Manjari', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 5rem;
+    background-color: rgba(0,0,0,0);
+    text-align:center;
+    transition: background 0.2s;
+}
+.expand-button>h1{
+    padding-top: 5rem;
+    font-size: 4rem;
+}
+.expand-button>p{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.expand-button::after{
+    content: '\25be'; /* Down triangle */
+    float: bottom;
+}
+
+.expand-button--active{
+    display: block;
+    width: 100%;
+    font-family: 'Manjari', sans-serif;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 5rem;
+    background-color: rgba(0,0,0,.0);
+    text-align:center;
+    transition: background 0.2s;
+}
+.expand-button--active::after{
+    content: '\25b4';
+    float: bottom;
+    transform: scale(3);
+}
+.fisio-content{
+    overflow: hidden;
+    max-height: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+	flex-wrap: wrap;
+    justify-content: center;
+    transition: max-height 0.2s;
+}
+
+.fisio-type{
+    color: white;
+    flex-basis: 33%;
+    padding: 1rem;
+}
+
+.fisio-type>h1{
+    font-size: 1.8rem;
+}
+
+ @media (max-width: 60rem) {
+        .fisio-type{
+            padding: 2rem;
+            flex-basis: 100%;
+        }
+
+}
+
