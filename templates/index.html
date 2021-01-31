@@ -7,6 +7,7 @@
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link href="../css/navbar.css" rel="stylesheet" type="text/css">
     <link href="../css/aboutUs.css" rel="stylesheet" type="text/css">
+    <link href="../css/fisiotherapy.css" rel="stylesheet" type="text/css">
     <link href="../css/services.css" rel="stylesheet" type="text/css">
     <link href="../css/team.css" rel="stylesheet" type="text/css">
     <link href="../css/footer.css" rel="stylesheet" type="text/css">
@@ -73,6 +74,58 @@
                         </div>
                   </div>
                 </div>
+
+               <!-- Fisiotherapy -->
+               <div class="fisiotherapy" style="background-image: url('../img/Musculo10.jpg')">
+                   <div class="fisiotherapy-area">
+                       <button type="button"  class="expand-button">
+                               <h1>Fisioterapia</h1>
+                                <p> A Eurofísica é um espaço acolhedor e exemplar na área da
+                                medicina física e de reabilitação criado a pensar em si.
+                                Dispomos de gabinetes de consulta totalmente equipados e
+                                prontos para dar resposta às suas necessidades.
+                                Dispomos ainda de acordos e convenções com as mais
+                                importantes seguradoras. A Eurofísica é um espaço acolhedor e exemplar na área da
+                                medicina física e de reabilitação criado a pensar em si.
+
+                                </p>
+                       </button>
+
+                       <div class="fisio-content">
+                           <div class="fisio-type">
+                             <h1>Músculo-Esquelética</h1>
+                             <p> A Eurofísica é um espaço acolhedor e exemplar na área da
+                                medicina física e de reabilitação criado a pensar em si.
+                                Dispomos de gabinetes de consulta totalmente equipados e
+                                prontos para dar resposta às suas necessidades.
+                                Dispomos ainda de acordos e convenções com as mais
+                                importantes seguradoras.
+                                </p>
+                           </div>
+                           <div class="fisio-type">
+                               <h1>Respiratória</h1>
+                               <p> A Eurofísica é um espaço acolhedor e exemplar na área da
+                                medicina física e de reabilitação criado a pensar em si.
+                                Dispomos de gabinetes de consulta totalmente equipados e
+                                prontos para dar resposta às suas necessidades.
+                                Dispomos ainda de acordos e convenções com as mais
+                                importantes seguradoras.
+                                </p>
+                           </div>
+                           <div class="fisio-type">
+                               <h1>Neurológica</h1>
+                               <p> A Eurofísica é um espaço acolhedor e exemplar na área da
+                                medicina física e de reabilitação criado a pensar em si.
+                                Dispomos de gabinetes de consulta totalmente equipados e
+                                prontos para dar resposta às suas necessidades.
+                                Dispomos ainda de acordos e convenções com as mais
+                                importantes seguradoras.
+                                </p>
+                           </div>
+                       </div>
+                   </div>
+
+               </div>
 
                <!-- Services -->
                <div class="services">
@@ -262,6 +315,25 @@
             offset:120, //
             duration: 500
         });
+      </script>
+
+      <!-- Fisioterapia button -->
+      <script>
+          document.querySelectorAll('.expand-button').forEach(button => {
+              button.addEventListener('click', () =>{
+                  const fisioContent = button.nextElementSibling;
+                  button.classList.toggle('expand-button--active');
+                  const fisiotherapyArea = document.querySelector('.fisiotherapy-area');
+
+                  if(button.classList.contains('expand-button--active')){
+                      fisioContent.style.maxHeight = fisioContent.scrollHeight+'px';
+                      fisiotherapyArea.style.backgroundColor = "rgba(0,0,0,0.7)";
+                  }else{
+                      fisioContent.style.maxHeight = '0px';
+                      fisiotherapyArea.style.backgroundColor = "rgba(0,0,0,0.4)";
+                  }
+              });
+          })
       </script>
 
 
