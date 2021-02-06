@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- FROM:https://github.com/michalsnik/aos -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
     <title>Eurofisica</title>
 </head>
 
@@ -272,17 +271,17 @@
                                 <a href="#"><i class="fab fa-facebook" style="color: white; margin-right: 1rem" ></i></a>
                                 <a href="#"><i class="fab fa-instagram"style="color: white"></i></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
-            </footer>
+        </footer>
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      
+      
+      <!-- Trigger Nav Bar function -->
+      <script>
             $(function () {
                 $(window).on('scroll', function () {
                     if ( $(window).scrollTop() > 10 ) {
@@ -292,37 +291,31 @@
                     }
                 });
             });
-        </script>
-        <script>
-            function parallax_height() {
-              var scroll_top = $(this).scrollTop();
-              var sample_section_top = $(".section").offset().top;
-              var header_height = $(".header-section").outerHeight();
-              $(".section").css({ "margin-top": header_height });
-              $(".header").css({ height: header_height - scroll_top });
-            }
-            parallax_height();
-            $(window).scroll(function() {
-              parallax_height();
-            });
-            $(window).resize(function() {
-              parallax_height();
-            });
-        </script>
-
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <!-- FROM:https://github.com/michalsnik/aos -->
-      <script>
-        AOS.init({
-            offset:120, //
-            duration: 500
-        });
       </script>
 
-      <!-- Fisioterapia button -->
+      <!-- Parallax Effect -->
+      <script>
+            function parallax_height() {
+              var scroll_top = $(this).scrollTop();
+              var sample_section_top = $(".section-wrap").offset().top;
+              var header_height = $(".header-section").outerHeight();
+              $(".section-wrap").css({ "margin-top": header_height });
+              $(".header").css({ height: header_height - scroll_top });
+            }
+
+            parallax_height();
+            $(window).scroll( () => {
+              parallax_height();
+            });
+            $(window).resize( () => {
+              parallax_height();
+            });
+      </script>
+
+      <!-- Social media icons -->
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+      <!-- Trigger Fisiotherapy button -->
       <script>
           document.querySelectorAll('.expand-button').forEach(button => {
               button.addEventListener('click', () =>{
