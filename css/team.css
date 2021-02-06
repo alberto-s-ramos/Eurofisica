@@ -4,12 +4,32 @@
 * ==========================================
 */
 
+.teamArea {
+  position: relative;
+  background-image:  linear-gradient(#6a1630, #40101f);
+
+  color: white;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.teamArea>h1{
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .team {
     display: flex;
     position: relative;
 	flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 0rem;
 }
 
 .teamCard {
@@ -20,15 +40,16 @@
     background-clip: border-box;
     background-color: #1f232a; /* #34ebe1; */
     width: auto;
-    height: 225px;
-    min-width: 200px;
+    height: 205px;
+    min-width: 160px;
 	padding-top: 1rem;
-	margin: 0.5rem;
+	margin: 1.1rem;
     text-align: center;
     transition: all 1.5s;
     overflow: hidden;
     border-radius: 10px;
     border: solid #1f232a;
+    transform: scale(1.1);
 
 }
 
@@ -62,8 +83,8 @@
 
 .teamCard img {
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     display: block;
     margin: auto;
 	border-radius: 50%;
@@ -72,5 +93,16 @@
 }
 
 .teamCard:hover{
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
+@media (max-width: 55rem) {
+    .teamCard{
+        transform: scale(1.0);
+        margin: .8rem;
+    }
+    .teamCard:hover{
+        transform: scale(1.05);
+    }
+
+}
+
