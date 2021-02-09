@@ -25,6 +25,7 @@
     color: white;
     position: relative;
     cursor: pointer;
+    transition: all 0.2s;
     -webkit-transition: all 0.2s;
 }
 

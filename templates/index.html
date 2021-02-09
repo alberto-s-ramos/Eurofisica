@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-   
+
     <title>Eurofisica</title>
 </head>
 
@@ -222,8 +222,8 @@
         </div>
     </div>
 
-    <script async> 
-    
+    <script async>
+
         const services = document.querySelectorAll('.serviceImage');
 
         const toggleExpansion = (element, to, duration = 350) => {
@@ -239,8 +239,6 @@
                     element.style.left = to.left;
                     element.style.width = to.width;
                     element.style.height = to.height;
-
-<<<<<<< HEAD
                 });
                 setTimeout(res, duration);
             });
@@ -259,12 +257,12 @@
         }
 
         const getServiceContent = (title, type) => {
-			return `
+            return `
 				<div class="service-content">
 					<h2>${title}</h2>
 				</div>
 			`;
-		}
+        }
 
         const onServiceClick = async (e) => {
             const service = e.currentTarget;
@@ -282,7 +280,7 @@
             service.style.opacity = '0'
             // add the clone to the same container
             service.parentNode.appendChild(serviceClone);
-            
+
             const closeButton = document.createElement('button');
             closeButton.style = `
             position: fixed;
@@ -329,81 +327,92 @@
         services.forEach(service => service.addEventListener('click', onServiceClick));
 
     </script>
-   
+
     <!-- Team -->
     <div class="teamArea">
         <h1> Equipa </h1>
         <div class="team">
-             <div class='teamCard'>
-                 <img alt='Alda Bento' src="../img/team/AldaBento.jpeg" />
-                    <h3>Alda Bento</h3>
-             </div>
-             <div class='teamCard'>
-                 <img alt='Ana Raquel Loureiro' src="../img/team/AnaRaquelLoureiro.jpeg" />
-                 <h3>Ana Raquel Loureiro</h3>
-             </div>
-             <div class='teamCard'>
-                 <img alt='Mariana Ambrósio' src="../img/team/MarianaAmbrosio.jpeg" />
-                 <h3>Mariana Ambrósio</h3>
-             </div>
-             <div class='teamCard'>
-                 <img alt='Nicole Brito' src="../img/team/NicoleBrito.jpeg" />
-                 <h3>Nicole Brito</h3>
-             </div>
-             <div class='teamCard'>
-                 <img alt='Pedro Catarro' src="../img/team/PedroCatarro.jpeg" />
-                 <h3>Pedro Catarro</h3>
-             </div>
-         </div>
+            <div class='teamCard'>
+                <img alt='Alda Bento' src="../img/team/AldaBento.jpeg" />
+                <h3>Alda Bento</h3>
+            </div>
+            <div class='teamCard'>
+                <img alt='Ana Raquel Loureiro' src="../img/team/AnaRaquelLoureiro.jpeg" />
+                <h3>Ana Raquel Loureiro</h3>
+            </div>
+            <div class='teamCard'>
+                <img alt='Mariana Ambrósio' src="../img/team/MarianaAmbrosio.jpeg" />
+                <h3>Mariana Ambrósio</h3>
+            </div>
+            <div class='teamCard'>
+                <img alt='Nicole Brito' src="../img/team/NicoleBrito.jpeg" />
+                <h3>Nicole Brito</h3>
+            </div>
+            <div class='teamCard'>
+                <img alt='Pedro Catarro' src="../img/team/PedroCatarro.jpeg" />
+                <h3>Pedro Catarro</h3>
+            </div>
+        </div>
 
     </div>
 
     <!-- Agreements -->
-    <div class="agreements" >
-        <div class='agreement'>
-            <span class="helper"></span><img alt='ADSE - Regime Livre' src="../img/agreements/ADSE - Regime Livre.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='AdvanceCare - Sinistros' src="../img/agreements/AdvanceCare - Sinistros.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='AdvantageSaúde' src="../img/agreements/AdvantageSaúde.jpg" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Departamento de Saúde, Higiene e Segurança da Câmara Municipal de Lisboa' src="../img/agreements/Departamento de Saúde, Higiene e Segurança da Câmara Municipal de Lisboa.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='IASFA _ ADM' src="../img/agreements/IASFA _ ADM.jpg" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Labocentro - Laboratório de Análises Clínicas' src="../img/agreements/Labocentro - Laboratório de Análises Clínicas.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Liberty Seguros - Sinistros' src="../img/agreements/Liberty Seguros - Sinistros.jpg" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='MAPFRE -  Sinistros' src="../img/agreements/MAPFRE -  Sinistros.jpg" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Médis CTT' src="../img/agreements/Médis CTT.jpg" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Médis' src="../img/agreements/Médis.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Multicare PT' src="../img/agreements/Multicare PT.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Multicare' src="../img/agreements/Multicare.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='SAD GNR' src="../img/agreements/SAD GNR.jpg" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='SAD PSP' src="../img/agreements/SAD PSP.png" />
-        </div>
-        <div class='agreement'>
-            <span class="helper"></span><img alt='Serviços Sociais da Caixa Geral de Depósitos' src="../img/agreements/Serviços Sociais da Caixa Geral de Depósitos.jpg" />
+    <div class="agreementsArea">
+        <h1> Acordos </h1>
+        <div class="agreements">
+            <div class='agreement'>
+                <span class="helper"></span><img alt='ADSE - Regime Livre'
+                    src="../img/agreements/ADSE - Regime Livre.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='AdvanceCare - Sinistros'
+                    src="../img/agreements/AdvanceCare - Sinistros.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='AdvantageSaúde' src="../img/agreements/AdvantageSaúde.jpg" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img
+                    alt='Departamento de Saúde, Higiene e Segurança da Câmara Municipal de Lisboa'
+                    src="../img/agreements/Departamento de Saúde, Higiene e Segurança da Câmara Municipal de Lisboa.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='IASFA _ ADM' src="../img/agreements/IASFA _ ADM.jpg" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Labocentro - Laboratório de Análises Clínicas'
+                    src="../img/agreements/Labocentro - Laboratório de Análises Clínicas.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Liberty Seguros - Sinistros'
+                    src="../img/agreements/Liberty Seguros - Sinistros.jpg" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='MAPFRE -  Sinistros'
+                    src="../img/agreements/MAPFRE -  Sinistros.jpg" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Médis CTT' src="../img/agreements/Médis CTT.jpg" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Médis' src="../img/agreements/Médis.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Multicare PT' src="../img/agreements/Multicare PT.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Multicare' src="../img/agreements/Multicare.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='SAD GNR' src="../img/agreements/SAD GNR.jpg" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='SAD PSP' src="../img/agreements/SAD PSP.png" />
+            </div>
+            <div class='agreement'>
+                <span class="helper"></span><img alt='Serviços Sociais da Caixa Geral de Depósitos'
+                    src="../img/agreements/Serviços Sociais da Caixa Geral de Depósitos.jpg" />
+            </div>
         </div>
     </div>
 
@@ -411,7 +420,10 @@
     <footer>
         <div class="footerContent">
             <div class="left box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.6332098425746!2d-9.315529884491303!3d38.77211596192398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ece3026ce571b%3A0x68077c47a40aab99!2sEurof%C3%ADsica!5e0!3m2!1spt-PT!2spt!4v1610476921696!5m2!1spt-PT!2spt" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.6332098425746!2d-9.315529884491303!3d38.77211596192398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ece3026ce571b%3A0x68077c47a40aab99!2sEurof%C3%ADsica!5e0!3m2!1spt-PT!2spt!4v1610476921696!5m2!1spt-PT!2spt"
+                    width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
             </div>
             <div class="right box">
                 <h1> Contactos </h1>
@@ -422,78 +434,80 @@
                     </div>
                     <div class="phone">
                         <span class="fas fa-phone-alt"></span>
-                        <span class="text">+351 919 312 536  |  +351 219 146 607</span>
+                        <span class="text">+351 919 312 536 | +351 219 146 607</span>
                     </div>
                     <div class="email">
                         <span class="fas fa-envelope"></span>
                         <span class="text">eurofisicacacem@gmail.com</span>
                     </div>
-                     <div class="social">
-                        <a href="#"><i class="fab fa-facebook" style="color: white; margin-right: 1rem" ></i></a>
-                        <a href="#"><i class="fab fa-instagram"style="color: white"></i></a>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook" style="color: white; margin-right: 1rem"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="color: white"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-</footer>
+    </footer>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 
 
-<!-- Trigger Nav Bar function -->
-<script>
-    $(function () {
-        $(window).on('scroll', function () {
-            if ( $(window).scrollTop() > 10 ) {
-                $('.navbar').addClass('active');
-            } else {
-                $('.navbar').removeClass('active');
-            }
+    <!-- Trigger Nav Bar function -->
+    <script>
+        $(function () {
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > 10) {
+                    $('.navbar').addClass('active');
+                } else {
+                    $('.navbar').removeClass('active');
+                }
+            });
         });
-    });
-</script>
+    </script>
 
-<!-- Parallax Effect -->
-<script>
-    function parallax_height() {
-      var scroll_top = $(this).scrollTop();
-      var sample_section_top = $(".section-wrap").offset().top;
-      var header_height = $(".header-section").outerHeight();
-      $(".section-wrap").css({ "margin-top": header_height });
-      $(".header").css({ height: header_height - scroll_top });
-    }
+    <!-- Parallax Effect -->
+    <script>
+        function parallax_height() {
+            var scroll_top = $(this).scrollTop();
+            var sample_section_top = $(".section-wrap").offset().top;
+            var header_height = $(".header-section").outerHeight();
+            $(".section-wrap").css({ "margin-top": header_height });
+            $(".header").css({ height: header_height - scroll_top });
+        }
 
-    parallax_height();
-    $(window).scroll( () => {
-      parallax_height();
-    });
-    $(window).resize( () => {
-      parallax_height();
-    });
-</script>
+        parallax_height();
+        $(window).scroll(() => {
+            parallax_height();
+        });
+        $(window).resize(() => {
+            parallax_height();
+        });
+    </script>
 
-<!-- Social media icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-<!-- Trigger Fisiotherapy button -->
-<script>
-  document.querySelectorAll('.expand-button').forEach(button => {
-      button.addEventListener('click', () =>{
-          const fisioContent = button.nextElementSibling;
-          button.classList.toggle('expand-button--active');
-          const fisiotherapyArea = document.querySelector('.fisiotherapy-area');
+    <!-- Trigger Fisiotherapy button -->
+    <script>
+        document.querySelectorAll('.expand-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const fisioContent = button.nextElementSibling;
+                button.classList.toggle('expand-button--active');
+                const fisiotherapyArea = document.querySelector('.fisiotherapy-area');
 
-          if(button.classList.contains('expand-button--active')){
-              fisioContent.style.maxHeight = fisioContent.scrollHeight+'px';
-              fisiotherapyArea.style.backgroundColor = "rgba(0,0,0,0.7)";
-          }else{
-              fisioContent.style.maxHeight = '0px';
-              fisiotherapyArea.style.backgroundColor = "rgba(0,0,0,0.4)";
-          }
-      });
-  })
-</script>
+                if (button.classList.contains('expand-button--active')) {
+                    fisioContent.style.maxHeight = fisioContent.scrollHeight + 'px';
+                    fisiotherapyArea.style.backgroundColor = "rgba(0,0,0,0.7)";
+                } else {
+                    fisioContent.style.maxHeight = '0px';
+                    fisiotherapyArea.style.backgroundColor = "rgba(0,0,0,0.4)";
+                }
+            });
+        })
+    </script>
 
 
 
