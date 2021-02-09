@@ -19,6 +19,10 @@ body {
     width: 55%;
 }
 
+img{
+    image-rendering: auto;
+}
+
 /*
 * ==========================================
 * TYPOGRAPHY
@@ -29,6 +33,7 @@ p{
     font-size: 1rem;
     font-family: 'Manjari', sans-serif;
 }
+
 h1{
     font-size: 3rem;
     font-family: 'Manjari', sans-serif;
@@ -58,12 +63,14 @@ h1{
   top: 0;
   width: 100%;
   background-image: url("../img/Musculo10.jpg");
+  background-attachment: fixed;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   animation: slide 20s infinite;
   background-color: #1d1d1d;
 }
+
 .header::before {
   content: "";
   position: absolute;
@@ -73,6 +80,7 @@ h1{
   left: 0;
   opacity: 0.3;
 }
+
 .header-section {
   position: relative;
   height: 50vh;

@@ -25,7 +25,7 @@
     color: white;
     position: relative;
     cursor: pointer;
-    -webkit-transition: all 0.5s;
+    -webkit-transition: all 0.2s;
 }
 
 .serviceImage>h1{
