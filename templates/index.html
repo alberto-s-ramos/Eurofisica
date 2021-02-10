@@ -37,6 +37,7 @@
                             class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Serviços</a></li>
                 <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Equipa</a></li>
+                <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Acordos</a></li>
                 <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Contactos</a></li>
             </ul>
         </div>
@@ -196,12 +197,12 @@
         <div class="serviceImage" style="background-image: url('../img/services/Service5.jpg')">
             <div class="serviceDescription">
                 <h1> Pilates Clínico </h1>
-                <p> A Eurofísica é um espaço acolhedor e exemplar na área da
-                    medicina física e de reabilitação criado a pensar em si.
-                    Dispomos de gabinetes de consulta totalmente equipados e
-                    prontos para dar resposta às suas necessidades.
-                    Dispomos ainda de acordos e convenções com as mais
-                    importantes seguradoras.
+                <p> O Pilates Clínico, sob orientações específicas de um fisioterapeuta, visa o aumento da consciência
+                    corporal através da realização de exercícios com foco no controlo de estabilidade lombar e
+                    abdominal.
+                    Direcionados para qualquer pessoa, com ou sem patologia associada e/ou necessidade de reabilitação,
+                    permite igualmente ganhos de mobilidade articular, flexibilidade muscular, controlo postural e, não
+                    menos importante, ganho de controlo respiratório.
                 </p>
             </div>
             <h1> Pilates Clínico </h1>
@@ -209,19 +210,19 @@
 
         <div class="serviceImage" style="background-image: url('../img/services/Service6.jpg')">
             <div class="serviceDescription">
-                <h1> Consultas de Psiquiatria </h1>
-                <p> A Eurofísica é um espaço acolhedor e exemplar na área da
-                    medicina física e de reabilitação criado a pensar em si.
-                    Dispomos de gabinetes de consulta totalmente equipados e
-                    prontos para dar resposta às suas necessidades.
-                    Dispomos ainda de acordos e convenções com as mais
-                    importantes seguradoras.
+                <h1> Fisioterapia no Domicilio </h1>
+                <p> Prestação dos serviços de Fisioterapia na casa dos utentes, atenuando as dificuldades de deslocação
+                    à clínica, seja por incapacidade física, falta de transporte, acompanhamento e/ou tempo. Esta
+                    modalidade da Fisioterapia pode ser uma solução temporária ou permanente, e visa facilitar o acesso
+                    dos utentes aos tratamentos necessários.
+
                 </p>
             </div>
             <h1> Fisioterapia no Domicilio </h1>
         </div>
     </div>
 
+    <!-- Expand Services on click -->
     <script async>
 
         const services = document.querySelectorAll('.serviceImage');
@@ -276,8 +277,6 @@
             serviceClone.style.left = left + 'px';
             serviceClone.style.width = width + 'px';
             serviceClone.style.height = height + 'px';
-            // hide the original service with opacity
-            service.style.opacity = '0'
             // add the clone to the same container
             service.parentNode.appendChild(serviceClone);
 
@@ -285,10 +284,10 @@
             closeButton.style = `
             position: fixed;
             z-index: 10000;
-            top: 15vh;
-            left: 15vw;
-            width: 70vw;
-            height: 70vh;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             opacity: 0;
             `;
 
@@ -303,8 +302,6 @@
                 fadeContent(serviceClone, '0');
                 // shrink the card back to the original position and size
                 await toggleExpansion(serviceClone, { top: `${top}px`, left: `${left}px`, width: `${width}px`, height: `${height}px` }, 300)
-                // show the original card again
-                service.style.removeProperty('opacity');
                 // remove the clone card
                 serviceClone.remove();
             });
@@ -319,6 +316,7 @@
             // set the display block so the content will follow the normal flow in case the original card is not display block
             serviceClone.style.display = 'block';
             serviceClone.style.padding = '0';
+            serviceClone.style.color = 'black'
             // append the close button after the expansion is done
             serviceClone.appendChild(closeButton);
             serviceClone.insertAdjacentHTML('afterbegin', content);
