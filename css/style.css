@@ -38,10 +38,7 @@ h1{
     font-size: 3rem;
     font-family: 'Manjari', sans-serif;
 }
-h2{
-    font-size: 3rem;
-    font-family: 'Manjari', sans-serif;
-}
+
 .title{
     font-size: 5rem;
     text-align: center;
@@ -87,7 +84,7 @@ h2{
 
 .header-section {
   position: relative;
-  height: 50vh;
+  height: 70vh;
   padding: 15% 0 10%;
   max-width: 640px;
   margin-left: auto;
@@ -112,3 +109,8 @@ h2{
     }
 }
 
+@media (max-width: 55rem) {
+    .header-section {
+        height: 60vh;
+      }
+}

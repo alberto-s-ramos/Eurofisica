@@ -33,12 +33,12 @@
                 class="fa fa-bars"></i></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse" style="margin-right: 3rem">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="#" class="nav-link  font-weight-bold">Sobre nós <span
+                <li class="nav-item active"><a href="#aboutsection" class="nav-link  font-weight-bold">Sobre nós <span
                             class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Equipa</a></li>
-                <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Acordos</a></li>
-                <li class="nav-item"><a href="#" class="nav-link font-weight-bold">Contactos</a></li>
+                <li class="nav-item"><a href="#fisiotherapysection" class="nav-link font-weight-bold">Serviços</a></li>
+                <li class="nav-item"><a href="#teamsection" class="nav-link font-weight-bold">Equipa</a></li>
+                <li class="nav-item"><a href="#agreementssection" class="nav-link font-weight-bold">Acordos</a></li>
+                <li class="nav-item"><a href="#footersection" class="nav-link font-weight-bold">Contactos</a></li>
             </ul>
         </div>
     </nav>
@@ -53,7 +53,7 @@
     </div>
 
     <!-- Intro/About Us -->
-    <div class="section-wrap">
+    <div class="section-wrap" id="aboutsection">
         <div class="section">
             <div class="section-left">
                 <div class="introImage"></div>
@@ -84,7 +84,7 @@
     </div>
 
     <!-- Fisiotherapy -->
-    <div class="fisiotherapy" style="background-image: url('../img/Musculo10.jpg')">
+    <div class="fisiotherapy" id="fisiotherapysection" style="background-image: url('../img/Musculo10.jpg')">
         <div class="fisiotherapy-area">
             <button type="button" class="expand-button">
                 <h1>Fisioterapia</h1>
@@ -136,20 +136,20 @@
     </div>
 
     <!-- Services -->
-    <div class="services">
+    <div class="services" id="servicessection">
 
         <div class="serviceImage" style="background-image: url('../img/services/Service1.jpg')">
-            <div class="serviceDescription">
+                <div class="serviceDescription">
+                    <h1> Consultas de Medicina Física e de Reabilitação </h1>
+                    <p> A Eurofísica é um espaço acolhedor e exemplar na área da
+                        medicina física e de reabilitação criado a pensar em si.
+                        Dispomos de gabinetes de consulta totalmente equipados e
+                        prontos para dar resposta às suas necessidades.
+                        Dispomos ainda de acordos e convenções com as mais
+                        importantes seguradoras.
+                    </p>
+                </div>
                 <h1> Consultas de Medicina Física e de Reabilitação </h1>
-                <p> A Eurofísica é um espaço acolhedor e exemplar na área da
-                    medicina física e de reabilitação criado a pensar em si.
-                    Dispomos de gabinetes de consulta totalmente equipados e
-                    prontos para dar resposta às suas necessidades.
-                    Dispomos ainda de acordos e convenções com as mais
-                    importantes seguradoras.
-                </p>
-            </div>
-            <h1> Consultas de Medicina Física e de Reabilitação </h1>
         </div>
 
         <div class="serviceImage" style="background-image: url('../img/services/Service2.png')">
@@ -222,113 +222,114 @@
         </div>
     </div>
 
-    <!-- Expand Services on click -->
-    <script async>
+            <!-- Expand Services on click -->
+            <script async>
 
-        const services = document.querySelectorAll('.serviceImage');
+                const services = document.querySelectorAll('.serviceImage');
 
-        const toggleExpansion = (element, to, duration = 350) => {
-            return new Promise(res => {
-                requestAnimationFrame(() => {
-                    element.style.transition = `
-                            width ${duration}ms ease-in-out,
-                            height ${duration}ms ease-in-out,
-                            left ${duration}ms ease-in-out,
-                            top ${duration}ms ease-in-out
-                            `;
-                    element.style.top = to.top;
-                    element.style.left = to.left;
-                    element.style.width = to.width;
-                    element.style.height = to.height;
-                });
-                setTimeout(res, duration);
-            });
-        }
-
-        const fadeContent = (element, duration = 300) => {
-            return new Promise(res => {
-                [...element.children].forEach((child) => {
-                    requestAnimationFrame(() => {
-                        child.style.transition = `opacity ${duration}ms linear`;
-                        child.style.opacity = '0';
+                const toggleExpansion = (element, to, duration = 500) => {
+                    return new Promise(res => {
+                        requestAnimationFrame(() => {
+                            element.style.transition = `
+                                    width ${duration}ms ease-in-out,
+                                    height ${duration}ms ease-in-out,
+                                    left ${duration}ms ease-in-out,
+                                    top ${duration}ms ease-in-out
+                                    `;
+                            element.style.top = to.top;
+                            element.style.left = to.left;
+                            element.style.width = to.width;
+                            element.style.height = to.height;
+                            element.style.opacity = 1;
+                        });
+                        setTimeout(res, duration);
                     });
-                });
-                setTimeout(res, duration);
-            });
-        }
+                }
 
-        const getServiceContent = (title, content, type) => {
-            return `
-				<div class="service-content">
-					<h1>${title}</h1> <br>
-                    <p>${content}</p>
-				</div>
-			`;
-        }
+                const fadeContent = (element, duration = 150) => {
+                    return new Promise(res => {
+                        [...element.children].forEach((child) => {
+                            requestAnimationFrame(() => {
+                                child.style.transition = `opacity ${duration}ms linear`;
+                                child.style.opacity = '0';
+                            });
+                        });
+                        setTimeout(res, duration);
+                    });
+                }
 
-        const onServiceClick = async (e) => {
-            const service = e.currentTarget;
-            // clone the service
-            const serviceClone = service.cloneNode(true);
-            // get the location of the service
-            const { top, left, width, height } = service.getBoundingClientRect();
-            // position the clone on top of the original
-            serviceClone.style.position = 'fixed';
-            serviceClone.style.top = top + 'px';
-            serviceClone.style.left = left + 'px';
-            serviceClone.style.width = width + 'px';
-            serviceClone.style.height = height + 'px';
-            // add the clone to the same container
-            service.parentNode.appendChild(serviceClone);
+                const getServiceContent = (title, content, type) => {
+                    return `
+                        <div class="service-content">
+                            <h1>${title}</h1> <br>
+                            <p>${content}</p>
+                        </div>
+                    `;
+                }
 
-            const closeButton = document.createElement('button');
-            closeButton.style = `
-            position: fixed;
-            z-index: 10000;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            opacity: 0;
-            `;
+                const onServiceClick = async (e) => {
+                    const service = e.currentTarget;
+                    // clone the service
+                    const serviceClone = service.cloneNode(true);
+                    // get the location of the service
+                    const { top, left, width, height } = service.getBoundingClientRect();
+                    // position the clone on top of the original
+                    serviceClone.style.position = 'fixed';
+                    serviceClone.style.top = top + 'px';
+                    serviceClone.style.left = left + 'px';
+                    serviceClone.style.width = width + 'px';
+                    serviceClone.style.height = height + 'px';
+                    // add the clone to the same container
+                    service.parentNode.appendChild(serviceClone);
 
-            closeButton.addEventListener('click', async () => {
-                // remove the button on close
-                closeButton.remove();
-                // remove the display style so the original content is displayed right
-                serviceClone.style.removeProperty('display');
-                serviceClone.style.removeProperty('padding');
-                // show original card content
-                [...serviceClone.children].forEach(child => child.style.removeProperty('display'));
-                fadeContent(serviceClone, '0');
-                // shrink the card back to the original position and size
-                await toggleExpansion(serviceClone, { top: `${top}px`, left: `${left}px`, width: `${width}px`, height: `${height}px` }, 300)
-                // remove the clone card
-                serviceClone.remove();
-            });
-            // fade the content away
-            fadeContent(serviceClone, '0')
-                .then(() => {
-                    [...serviceClone.children].forEach(child => child.style.display = 'none');
-                });
-            // expand the clone card
-            await toggleExpansion(serviceClone, { top: '15vh', left: '15vw', width: '70vw', height: '70vh' });
-            const content = getServiceContent(service.children[0].children[0].textContent, service.children[0].children[1].textContent, service.dataset.type)
-            // set the display block so the content will follow the normal flow in case the original card is not display block
-            serviceClone.style.display = 'block';
-            serviceClone.style.padding = '0';
-            serviceClone.style.color = 'black'
-            // append the close button after the expansion is done
-            serviceClone.appendChild(closeButton);
-            serviceClone.insertAdjacentHTML('afterbegin', content);
-        };
+                    const closeButton = document.createElement('button');
+                    closeButton.style = `
+                    position: fixed;
+                    z-index: 10000;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    opacity: 0;
+                    `;
 
-        services.forEach(service => service.addEventListener('click', onServiceClick));
+                    closeButton.addEventListener('click', async () => {
+                        // remove the button on close
+                        closeButton.remove();
+                        // remove the display style so the original content is displayed right
+                        serviceClone.style.removeProperty('display');
+                        serviceClone.style.removeProperty('padding');
+                        // show original card content
+                        [...serviceClone.children].forEach(child => child.style.removeProperty('display'));
+                        fadeContent(serviceClone, '0');
+                        // shrink the card back to the original position and size
+                        await toggleExpansion(serviceClone, { top: `${top}px`, left: `${left}px`, width: `${width}px`, height: `${height}px` }, 300)
+                        // remove the clone card
+                        serviceClone.remove();
+                    });
+                    // fade the content away
+                    fadeContent(serviceClone, '0')
+                        .then(() => {
+                            [...serviceClone.children].forEach(child => child.style.display = 'none');
+                        });
+                    // expand the clone card
+                    await toggleExpansion(serviceClone, { top: '15vh', left: '15vw', width: '70vw', height: '70vh' });
+                    const content = getServiceContent(service.children[0].children[0].textContent, service.children[0].children[1].textContent, service.dataset.type)
+                    // set the display block so the content will follow the normal flow in case the original card is not display block
+                    serviceClone.style.display = 'block';
+                    serviceClone.style.padding = '0';
+                    serviceClone.style.color = 'black'
+                    // append the close button after the expansion is done
+                    serviceClone.appendChild(closeButton);
+                    serviceClone.insertAdjacentHTML('afterbegin', content);
+                };
 
-    </script>
+                services.forEach(service => service.addEventListener('click', onServiceClick));
+
+            </script>
 
     <!-- Team -->
-    <div class="teamArea">
+    <div class="teamArea" id="teamsection">
         <h1> Equipa </h1>
         <div class="team">
             <div class='teamCard'>
@@ -356,7 +357,7 @@
     </div>
 
     <!-- Agreements -->
-    <div class="agreementsArea">
+    <div class="agreementsArea" id="agreementssection">
         <h1> Acordos </h1>
         <div class="agreements">
             <div class='agreement'>
@@ -416,7 +417,7 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footersection">
         <div class="footerContent">
             <div class="left box">
                 <iframe
@@ -512,6 +513,35 @@
             });
         })
     </script>
+
+    <!-- ______ SMOOTH SCROLL ______ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+                  // Store hash
+                  var hash = this.hash;
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+        </script>
 
 
 
