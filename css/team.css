@@ -6,8 +6,8 @@
 
 .teamArea {
   position: relative;
-  background-image:  linear-gradient(#6a1630, #40101f);
-  color: white;
+  background-image:  white;
+  color: #1f232a;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -36,20 +36,24 @@
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
-    background-clip: border-box;
-    background-color: #1f232a; /* #34ebe1; */
     width: auto;
-    height: 205px;
-    min-width: 160px;
+    height: 225px;
+    min-width: 150px;
 	padding-top: 1rem;
 	margin: 1.1rem;
     text-align: center;
     transition: all 1.5s;
     overflow: hidden;
     border-radius: 10px;
-    border: solid #1f232a;
     transform: scale(1.1);
-
+}
+.teamCard-fisio {
+    background-color: #1f232a; /* #34ebe1; */
+    border: solid #1f232a;
+}
+.teamCard-admin{
+    background-color: #6a1630; /* #34ebe1; */
+    border: solid #6a1630;
 }
 
 .teamCard:before {
@@ -57,13 +61,19 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: #6a1630;
+
     bottom: 0;
     right: -1px;
     z-index: -1;
     border-top-left-radius: 10px;
     transition: 0.25s;
+}
 
+.teamCard-fisio:before {
+    background: #6a1630;
+}
+.teamCard-admin:before {
+    background: #1f232a;
 }
 
 .teamCard:hover:before {
