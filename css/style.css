@@ -23,6 +23,13 @@ img{
     image-rendering: auto;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -5rem;
+    visibility: hidden;
+}
+
 /*
 * ==========================================
 * TYPOGRAPHY
