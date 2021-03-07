@@ -9,11 +9,12 @@
   background-image:  white;
   color: #1f232a;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10rem;
+  margin-right: 10rem;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
+
 }
 
 .teamArea>h1{
@@ -112,6 +113,14 @@
     .teamCard:hover{
         transform: scale(1.05);
     }
+    .teamArea {
+    
+        margin-left: 1rem;
+        margin-right: 1rem;
+       
+      
+      }
+      
 
 }
 
