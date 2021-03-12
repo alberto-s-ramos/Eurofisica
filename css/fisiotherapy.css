@@ -41,8 +41,9 @@
 }
 
 .expand-button>p{
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    text-align: justify;
 }
 
 .expand-button::after{
@@ -97,6 +98,10 @@
         .fisio-type{
             padding: 2rem;
             flex-basis: 100%;
+        }
+        .expand-button>p{
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
 
 }
