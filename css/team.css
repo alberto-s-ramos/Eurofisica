@@ -6,7 +6,7 @@
 
 .teamArea {
   position: relative;
-  background-image:  white;
+  background-image: white;
   color: #1f232a;
   max-width: 100%;
   margin-left: 10rem;
@@ -62,7 +62,6 @@
     content: "";
     width: 10px;
     height: 10px;
-
     bottom: 0;
     right: -1px;
     z-index: -1;
@@ -114,11 +113,8 @@
         transform: scale(1.05);
     }
     .teamArea {
-    
         margin-left: 1rem;
         margin-right: 1rem;
-       
-      
       }
       
 
