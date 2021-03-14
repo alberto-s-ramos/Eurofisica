@@ -5,10 +5,16 @@
     font-size: 1.1rem;
     padding-left: 5rem;
     padding-right: 5rem;
+
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 0px 0px; /* top-left corner, top-right corner, bottom-right corner, bottom-left corner */
+    backdrop-filter: blur(20px);
 }
 
 .navbar .nav-link {
-    color: #ffffff;
+    color: #1f232a;
+
 }
 
 
