@@ -33,7 +33,10 @@ footer{
     margin: 0px 0 0 0;
 }
 
- @media (max-width: 55rem) {
+ @media (max-width: 45rem) {
+    .footer {
+        flex-direction: column;
+    }
 
 }
 
