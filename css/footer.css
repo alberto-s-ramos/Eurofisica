@@ -34,8 +34,11 @@ footer{
 }
 
  @media (max-width: 45rem) {
-    .footer {
-        flex-direction: column;
+    .footerContent {
+        flex-direction: column-reverse;
+    }
+    .footerBoxContent span {
+        font-size:.9rem;
     }
 
 }
