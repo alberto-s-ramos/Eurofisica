@@ -63,7 +63,6 @@
     object-fit: contain;
 }
 
-/* Changes sizes when window width decreases*/
         @media (max-width: 55rem) {
             .section {
               padding: 1rem;
