@@ -54,6 +54,10 @@
     width: 80%;
 }
 
+.section-right>h1{
+  font-size: 1.5rem;
+}
+
 .introImage2{
     content:url("../img/EuroFisicaIntro2.png");
     width: 0px;
@@ -63,7 +67,6 @@
     object-fit: contain;
 }
 
-/* Changes sizes when window width decreases*/
         @media (max-width: 55rem) {
             .section {
               padding: 1rem;

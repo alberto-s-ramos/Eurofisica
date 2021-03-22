@@ -12,7 +12,6 @@ footer{
     color: white;
     margin-bottom: 0px;
     font-family: 'Manjari', sans-serif;
-
 }
 
 .footerContent{
@@ -34,8 +33,11 @@ footer{
 }
 
  @media (max-width: 45rem) {
-    .footer {
-        flex-direction: column;
+    .footerContent {
+        flex-direction: column-reverse;
+    }
+    .footerBoxContent span {
+        font-size:.9rem;
     }
 
 }
