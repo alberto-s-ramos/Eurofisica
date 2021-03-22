@@ -6,7 +6,6 @@
 .services{
     width: 100%;
     height: 100%;
-    margin-top: 2rem;
 }
 
 .services>h1{
@@ -21,7 +20,7 @@
     position: relative;
 	flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1rem;
+    padding-top: 2rem;
     margin-bottom: 2rem;
     background: rgb(255, 255, 255);
 }

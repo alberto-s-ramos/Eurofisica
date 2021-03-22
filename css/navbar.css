@@ -1,4 +1,3 @@
-
 .navbar {
     transition: all 0.4s;
     font-family: 'Varela Round', sans-serif;
@@ -17,7 +16,6 @@
 
 }
 
-
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
     color: #6a1630;
@@ -27,7 +25,6 @@
 .navbar .navbar-brand {
     color: #ffffff;
 }
-
 
 /* Change navbar styling on scroll */
 .navbar.active {
@@ -41,8 +38,6 @@
     color: #1f232a;
 }
 
-
-
 .navbar.active .nav-link:hover,
 .navbar.active .nav-link:focus {
     color:#6a1630;
@@ -52,7 +47,6 @@
 .navbar.active .navbar-brand {
     color: #1f232a;
 }
-
 
 /* Change navbar styling on small viewports */
 @media (max-width: 991.98px) {
