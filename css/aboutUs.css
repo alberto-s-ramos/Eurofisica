@@ -54,6 +54,10 @@
     width: 80%;
 }
 
+.section-right>h1{
+  font-size: 1.5rem;
+}
+
 .introImage2{
     content:url("../img/EuroFisicaIntro2.png");
     width: 0px;
